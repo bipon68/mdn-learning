@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple switch example</title>
+  </head>
+  <body>
+    <label for="weather">Select the weather type today: </label>
+    <select id="weather">
+      <option value="">--Make a choice--</option>
+      <option value="sunny">Sunny</option>
+      <option value="rainy">Rainy</option>
+      <option value="snowing">Snowing</option>
+      <option value="overcast">Overcast</option>
+    </select>
+
+    <p></p>
+
+    <script>
+      var select = document.querySelector('select');
+      var para = document.querySelector('p');
+    
+    select.onchange = setWeather;
+
+    function setWeather(){
+        var choice = select.value;
+
+        switch(choice){
+            case 'sunny' :
+            para.textContent = 'para 1';
+            break;
+            case 'rainy' :
+            para.textContent = 'para 2';
+            break;
+            case 'snowing' :
+            para.textContent = 'para 3';
+            break;
+            case 'overcast' :
+            para.textContent = 'para 4';
+            break;
+        }
+    }
+
+    </script>
+  </body>
+</html>
